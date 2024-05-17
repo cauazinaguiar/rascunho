@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+// Função para converter de Celsius para Fahrenheit
+float celsius_para_fahrenheit(float celsius) {
+    return (celsius * 9 / 5) + 32;
+}
+
+// Função para converter de Fahrenheit para Celsius
+float fahrenheit_para_celsius(float fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+}
+
+int main() {
+    int escolha;
+    float temperatura;
+
+    printf("Escolha a opcao:\n");
+    printf("1. Celsius para Fahrenheit\n");
+    printf("2. Fahrenheit para Celsius\n");
+    scanf("%d", &escolha);
+
+    switch (escolha) {
+        case 1:
+            printf("Digite a temperatura em Celsius: ");
+            scanf("%f", &temperatura);
+            printf("%.2f graus Celsius equivale a %.2f graus Fahrenheit.\n", temperatura, celsius_para_fahrenheit(temperatura));
+            break;
+        case 2:
+            printf("Digite a temperatura em Fahrenheit: ");
+            scanf("%f", &temperatura);
+            printf("%.2f graus Fahrenheit equivale a %.2f graus Celsius.\n", temperatura, fahrenheit_para_celsius(temperatura));
+            break;
+        default:
+            printf("Opcao invalida.\n");
+    }
+
+    return 0;
+}
