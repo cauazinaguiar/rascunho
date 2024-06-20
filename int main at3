@@ -1,0 +1,17 @@
+	Livro*LordOfTheRing=createLivro("Lord Of The Ring",280,129);
+	Livro*CalicedeFogo=createLivro("Cálice de Fogo",300,70);
+	
+	LordOfTheRing->preco=400.0;
+	CalicedeFogo->preco=200.0;
+	
+	Aluno*Bob=createAluno("Bob",30,LordOfTheRing);
+	Aluno*Mariana=createAluno("Mariana",19,CalicedeFogo);
+	
+	
+	printAluno(Bob);
+	printAluno(Mariana);
+	
+	desaloca_Livro(&LordOfTheRing);
+	desaloca_Livro(&CalicedeFogo);
+	desaloca_Aluno(&Bob);
+	desaloca_Aluno(&Mariana);
